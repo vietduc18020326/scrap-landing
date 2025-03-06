@@ -9,8 +9,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "primary-1": "#F57700",
+        "primary-2": "#FDEACE",
+
+        "neutral-1": "#18191B",
+      },
+      width: {
+        content: "1161px",
+      },
+      fontFamily: {
+        lato: ["var(--font-lato)", "sans-serif"],
       },
     },
   },
