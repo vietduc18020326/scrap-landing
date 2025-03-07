@@ -1,5 +1,6 @@
 import { memo, PropsWithChildren } from "react";
 import { Navbar } from "@/components/Navbar";
+import { FooterSection } from "@/components/FooterSection";
 
 interface Props {}
 
@@ -9,7 +10,8 @@ export const CustomLayout = memo(function CustomLayout({
   return (
     <div className="root-container">
       <Navbar />
-      <main>{children}</main>
+      <main className={`flex min-h-screen flex-col`}>{children}</main>
+      <FooterSection />
     </div>
   );
 });

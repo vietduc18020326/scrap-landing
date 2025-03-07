@@ -15,8 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${FONTS.LATO.variable}`}>
+    <html lang="en" className={FONTS.LATO.className}>
+      {/*<Head>*/}
+      {/*  <link*/}
+      {/*    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"*/}
+      {/*    rel="stylesheet"*/}
+      {/*  />*/}
+      {/*</Head>*/}
+      <body>
         <div id="root">
           <CustomLayout>{children}</CustomLayout>
         </div>
