@@ -1,4 +1,4 @@
-import { Inter, Lato } from "next/font/google";
+import { Lato } from "next/font/google";
 
 const LATO = Lato({
   subsets: ["latin"],

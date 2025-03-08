@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { CustomLayout } from "@/components";
 import { FONTS } from "@/app/fonts";
 import React from "react";

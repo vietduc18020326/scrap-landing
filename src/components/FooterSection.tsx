@@ -7,6 +7,7 @@ import {
 } from "@/assets";
 import { UIButton } from "@/components/UIButton";
 import Link from "next/link";
+import Image from "next/image";
 
 export const FooterSection = memo(function FooterSection() {
   return (

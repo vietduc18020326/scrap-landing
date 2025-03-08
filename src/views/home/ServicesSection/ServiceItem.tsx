@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { UITextBody, UITextHeading } from "@/components";
+import Image from "next/image";
 
 export const ServiceItem = memo(function ServiceItem({
   title,

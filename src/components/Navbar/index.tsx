@@ -2,6 +2,7 @@ import { memo } from "react";
 import { IMAGE_LOGO } from "@/assets";
 import { UIButton, UITextBody } from "@/components";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Navbar = memo(function Navbar() {
   return (

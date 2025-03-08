@@ -110,4 +110,31 @@ const HOME = [
   },
 ];
 
-export const DUMMY_SOLUTION = { HOME };
+const PLAN = [
+  {
+    title: "Scrap Collection Essentials",
+    description:
+      "Delve into the core principles of scrap collection in this comprehensive guide. We cover everything from understanding market dynamics and emerging trends to practical tips on streamlining your operations. Whether you're new to the industry or a seasoned professional, discover actionable insights that can help you optimize processes, reduce waste, and boost overall efficiency in scrap management.",
+    image:
+      "https://images2.thanhnien.vn/528068263637045248/2023/2/13/anh-13-16762617723252132283526.jpg",
+    link: "",
+  },
+  {
+    title: "Maximizing Scrap Value",
+    description:
+      "Unlock the hidden potential of your scrap assets by learning strategies that ensure you get the best market rates. This post takes an in-depth look at valuation techniques, negotiation tactics, and market analytics that empower businesses to maximize profits. With real-life case studies and expert advice, you'll gain the tools needed to navigate the competitive landscape of scrap trading successfully.",
+    image:
+      "https://afamilycdn.com/150157425591193600/2023/2/5/tp-13-4504-1675579834978-1675579835053893190297.jpg",
+    link: "",
+  },
+  {
+    title: "Waste Plastic Kabadi Rate - Daily Updated Price",
+    description:
+      "Delve into the core principles of scrap collection in this comprehensive guide. We cover everything from understanding market dynamics and emerging trends to practical tips on streamlining your operations. Whether you're new to the industry or a seasoned professional, discover actionable insights that can help you optimize processes, reduce waste, and boost overall efficiency in scrap management.",
+    image:
+      "https://image.sggp.org.vn/w1000/Uploaded/2025/crnwcqjwp/2019_06_17/ganhhang_OICB.jpg.webp",
+    link: "",
+  },
+];
+
+export const DUMMY_SOLUTION = { HOME, PLAN };

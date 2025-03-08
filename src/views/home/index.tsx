@@ -5,6 +5,9 @@ import { ServicesSection } from "@/views/home/ServicesSection";
 import { StaticSection } from "@/views/home/StaticSection";
 import { PriceSection } from "@/views/home/PriceSection";
 import { SolutionsSection } from "@/views/home/SolutionsSection";
+import { TeamSection } from "@/views/home/TeamSection";
+import { ContactSection } from "@/views/home/ContactSection";
+import { ScrapPlanSection } from "@/views/home/ScrapPlanSection";
 
 const HomePage = memo(function HomePage() {
   return (
@@ -78,6 +81,9 @@ const HomePage = memo(function HomePage() {
       <StaticSection />
       <PriceSection />
       <SolutionsSection />
+      <ScrapPlanSection />
+      <TeamSection />
+      <ContactSection />
     </div>
   );
 });
