@@ -84,9 +84,9 @@ export const ServicesSection = memo(function ServicesSection() {
   const [tabIndex, setTabIndex] = useState(0);
 
   return (
-    <section className="py-20 bg-white items-center justify-center flex">
+    <section className="py-20 bg-white items-center justify-center flex max-md:py-10 max-md:px-4">
       <div className="flex flex-col gap-12 items-center w-content justify-center">
-        <div className="w-[568px] flex flex-col gap-3 items-center justify-center relative">
+        <div className="w-[568px] flex flex-col gap-3 items-center justify-center relative max-md:w-full">
           <AbsTag
             title="For all"
             className="-top-[10px] right-[62px] rotate-[10.29deg]"
@@ -112,7 +112,7 @@ export const ServicesSection = memo(function ServicesSection() {
           ))}
         </ul>
 
-        <ul className="flex flex-row gap-5 w-full">
+        <ul className="flex flex-row gap-5 w-full max-md:flex-col max-md:gap-10">
           {DUMMY_SERVICES.map((item, index) => (
             <ServiceItem key={index} {...item} />
           ))}

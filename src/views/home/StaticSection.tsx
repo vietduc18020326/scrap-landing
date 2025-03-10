@@ -4,8 +4,8 @@ import { IMAGE_STATIC_1 } from "@/assets";
 
 export const StaticSection = memo(function StaticSection() {
   return (
-    <section className="flex w-full bg-white py-20 items-center justify-center">
-      <div className="relative w-content py-10 px-20 rounded-[12px] gap-10 flex flex-row bg-secondary-3">
+    <section className="flex w-full bg-white py-20 items-center justify-center max-md:py-[60px] max-md:px-4">
+      <div className="relative w-content py-10 px-20 rounded-[12px] gap-10 max-md:gap-8 flex flex-row bg-secondary-3 max-md:w-full max-md:flex-col max-md:px-4 max-md:py-[17px] max-md:h-[550px] max-md:justify-end">
         <div className="w-[293px] flex-col flex gap-2 items-start">
           <div className="flex flex-row gap-2 items-center">
             <div className="w-1 h-6 bg-secondary-1 rounded-r-full" />
@@ -36,7 +36,7 @@ export const StaticSection = memo(function StaticSection() {
         <img
           alt="image_static"
           src={IMAGE_STATIC_1}
-          className="absolute bottom-0 right-0 w-[457px] h-[337px] object-contain"
+          className="absolute bottom-0 right-0 w-[457px] h-[337px] object-contain max-md:bottom-auto max-md:-top-[100px] max-md:left-0 max-md:h-[254px]"
         />
       </div>
     </section>

@@ -40,19 +40,19 @@ export const Navbar = memo(function Navbar() {
           </svg>
         ) : (
           <div className="flex flex-row">
-            <Link href={"#"} className="py-3 px-4">
+            <Link href={"/"} className="py-3 px-4">
               <UITextBody.Bold16 text="Home" className="text-neutral-1" />
             </Link>
-            <Link href={"#"} className="py-3 px-4">
+            <Link href={"/rates"} className="py-3 px-4">
               <UITextBody.Bold16
                 text="Scrap Rates"
                 className="text-neutral-1"
               />
             </Link>
-            <Link href={"#"} className="py-3 px-4">
+            <Link href={"/blogs"} className="py-3 px-4">
               <UITextBody.Bold16 text="Blogs" className="text-neutral-1" />
             </Link>
-            <Link href={"#"} className="py-3 px-4">
+            <Link href={"/career"} className="py-3 px-4">
               <UITextBody.Bold16 text="Career" className="text-neutral-1" />
             </Link>
             <UIButton
@@ -81,11 +81,52 @@ export const Navbar = memo(function Navbar() {
           closable={false}
           onClose={hide}
           open={isOpen}
-          bodyStyle={{ padding: "44px 16px" }}
+          styles={{
+            body: {
+              padding: "44px 16px",
+              justifyContent: "space-between",
+              display: "flex",
+              flexDirection: "column",
+            },
+          }}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <div className="flex flex-col gap-4 items-start">
+            <Link href={"/"} onClick={hide} className="py-3 px-4">
+              <UITextBody.Bold16 text="Home" className="text-neutral-1" />
+            </Link>
+            <Link href={"/rates"} onClick={hide} className="py-3 px-4">
+              <UITextBody.Bold16
+                text="Scrap Rates"
+                className="text-neutral-1"
+              />
+            </Link>
+            <Link href={"/blogs"} onClick={hide} className="py-3 px-4">
+              <UITextBody.Bold16 text="Blogs" className="text-neutral-1" />
+            </Link>
+            <Link href={"/career"} onClick={hide} className="py-3 px-4">
+              <UITextBody.Bold16 text="Career" className="text-neutral-1" />
+            </Link>
+          </div>
+
+          <UIButton
+            title={"Register your store"}
+            textClassName="text-white"
+            className="bg-primary-1 h-fit"
+            RightIconComponent={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M10.5007 10L7.25065 6.75002C7.09787 6.59724 7.02148 6.4028 7.02148 6.16669C7.02148 5.93058 7.09787 5.73613 7.25065 5.58335C7.40343 5.43058 7.59787 5.35419 7.83398 5.35419C8.0701 5.35419 8.26454 5.43058 8.41732 5.58335L12.2507 9.41669C12.334 9.50002 12.393 9.5903 12.4277 9.68752C12.4625 9.78474 12.4798 9.88891 12.4798 10C12.4798 10.1111 12.4625 10.2153 12.4277 10.3125C12.393 10.4097 12.334 10.5 12.2507 10.5834L8.41732 14.4167C8.26454 14.5695 8.0701 14.6459 7.83398 14.6459C7.59787 14.6459 7.40343 14.5695 7.25065 14.4167C7.09787 14.2639 7.02148 14.0695 7.02148 13.8334C7.02148 13.5972 7.09787 13.4028 7.25065 13.25L10.5007 10Z"
+                  fill="white"
+                />
+              </svg>
+            }
+          />
         </Drawer>
       </div>
     </header>

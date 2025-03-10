@@ -1,3 +1,5 @@
+"use client";
+
 import { memo } from "react";
 import { AbsTag, UIButton, UITextBody, UITextHeading } from "@/components";
 import { IMAGE_PATTERN_BACKGROUND, VIDEO_HOME } from "@/assets";
@@ -8,38 +10,60 @@ import { SolutionsSection } from "@/views/home/SolutionsSection";
 import { TeamSection } from "@/views/home/TeamSection";
 import { ContactSection } from "@/views/home/ContactSection";
 import { ScrapPlanSection } from "@/views/home/ScrapPlanSection";
+import { useResizeDimensions } from "@/hooks";
 
 const HomePage = memo(function HomePage() {
+  const { isMobile } = useResizeDimensions();
+
   return (
     <div className="w-full flex flex-col">
-      <section className="flex items-center justify-center w-full bg-white py-20 relative">
+      <section className="flex items-center justify-center w-full bg-white py-20 relative max-md:py-10 max-md:px-4">
         <img
           className="absolute top-0 left-0 -z-1 right-0 object-cover w-full"
           alt="image"
           src={IMAGE_PATTERN_BACKGROUND}
         />
-        <div className="flex flex-col w-content gap-20 z-[10]">
+        <div className="flex flex-col w-content gap-20 z-[10] max-md:w-full max-md:gap-10">
           <div className="flex flex-col w-full gap-3 items-start">
-            <div className="flex flex-col gap-[11px]">
-              <UITextHeading.H1 className="text-neutral-1">
-                Maximize your scrop profits
-              </UITextHeading.H1>
-              <div className="flex flex-row gap-[13px] relative">
-                <UITextHeading.H1 className="text-neutral-1">
-                  with
-                </UITextHeading.H1>
-                <UITextHeading.H1 className="text-gradient">
-                  waste management.
-                </UITextHeading.H1>
-                <AbsTag
-                  title="Smart"
-                  className="left-[130px] rotate-[-7.169deg] -top-2"
+            {isMobile ? (
+              <div className="flex flex-col items-start">
+                <div className="relative">
+                  <UITextHeading.H3
+                    text="Maximize your scrop profits with"
+                    className="text-neutral-1"
+                  />
+                  <AbsTag
+                    title="Smart"
+                    className="left-[130px] rotate-[-7.169deg] -top-8 max-md:left-auto right-0"
+                  />
+                </div>
+                <UITextHeading.H3
+                  text="waste management."
+                  className="text-gradient"
                 />
               </div>
-            </div>
+            ) : (
+              <div className="flex flex-col gap-[11px]">
+                <UITextHeading.H1 className="text-neutral-1">
+                  Maximize your scrop profits
+                </UITextHeading.H1>
+                <div className="flex flex-row gap-[13px] relative">
+                  <UITextHeading.H1 className="text-neutral-1">
+                    with
+                  </UITextHeading.H1>
+                  <UITextHeading.H1 className="text-gradient">
+                    waste management.
+                  </UITextHeading.H1>
+                  <AbsTag
+                    title="Smart"
+                    className="left-[130px] rotate-[-7.169deg] -top-2"
+                  />
+                </div>
+              </div>
+            )}
 
             <UITextBody.Medium20
-              className="text-neutral-1 w-[667px]"
+              className="text-neutral-1 w-[667px] max-md:w-full"
               text="Join Scraplan to streamline your scrap collection, get the best market rates, and connect with reliable drivers – all in one platform."
             />
 
@@ -65,7 +89,7 @@ const HomePage = memo(function HomePage() {
           </div>
 
           <video
-            className="w-full h-[653px] rounded-[16px]"
+            className="w-full h-[653px] max-md:h-[192px] object-cover rounded-[16px]"
             autoPlay
             loop
             muted

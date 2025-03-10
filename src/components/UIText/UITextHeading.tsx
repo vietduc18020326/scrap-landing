@@ -16,6 +16,17 @@ const H1 = memo(function H1({ text, children, className, ...props }: Props) {
   );
 });
 
+const H3 = memo(function H3({ text, children, className, ...props }: Props) {
+  return (
+    <p
+      className={`text-[36px] font-extrabold not-italic leading-[44px] tracking-[-0.5px] font-lato ${className}`}
+      {...props}
+    >
+      {children || text}
+    </p>
+  );
+});
+
 const H2 = memo(function H2({ text, children, className, ...props }: Props) {
   return (
     <p
@@ -41,5 +52,6 @@ const H5 = memo(function H5({ text, children, className, ...props }: Props) {
 export const UITextHeading = {
   H1,
   H2,
+  H3,
   H5,
 };

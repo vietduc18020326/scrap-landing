@@ -37,7 +37,7 @@ export const ContactSection = memo(function ContactSection() {
   );
 
   return (
-    <section className="py-20 flex w-full bg-white items-center justify-center flex-col gap-12">
+    <section className="py-20 flex w-full bg-white items-center justify-center flex-col gap-12 max-md:py-10 max-md:px-4 max-md:gap-10">
       <div className="flex flex-col gap-3 items-center justify-center">
         <AbsTag title={"Contact us"} absolute={false} />
         <UITextHeading.H2
@@ -46,11 +46,11 @@ export const ContactSection = memo(function ContactSection() {
         />
       </div>
 
-      <form className="w-[764px] py-10 px-20 items-start rounded-[12px] bg-primary-3 relative">
+      <form className="w-[764px] py-10 px-20 items-start rounded-[12px] overflow-hidden bg-primary-3 relative max-md:py-5 max-md:px-4 max-md:w-full">
         <div className="flex flex-col gap-4 z-[10] relative">
           <UITextHeading.H5 text="Request demo" className="text-neutral-1" />
 
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row gap-4 max-md:flex-col">
             <UIInputField
               keyName={"name"}
               onChangeValue={onChangeValue}
@@ -64,7 +64,7 @@ export const ContactSection = memo(function ContactSection() {
               placeholder={"Company"}
             />
           </div>
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-row gap-4 max-md:flex-col">
             <UIInputField
               keyName={"email"}
               onChangeValue={onChangeValue}

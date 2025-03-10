@@ -10,7 +10,7 @@ export const CustomLayout = memo(function CustomLayout({
   return (
     <div className="root-container">
       <Navbar />
-      <main className={`flex min-h-screen flex-col`}>{children}</main>
+      <main className={`flex flex-col`}>{children}</main>
       <FooterSection />
     </div>
   );

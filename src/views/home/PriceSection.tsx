@@ -4,14 +4,14 @@ import { PRICE } from "@/dummy";
 
 export const PriceSection = memo(function PriceSection() {
   return (
-    <section className="w-full py-20 bg-primary-3 flex items-center justify-center">
-      <div className="w-content gap-12 flex flex-col items-center">
+    <section className="w-full py-20 bg-primary-3 flex items-center justify-center max-md:py-10 max-md:px-4">
+      <div className="w-content gap-12 flex flex-col items-center max-md:w-full">
         <UITextHeading.H2
           text="Best prices, transparent"
           className="text-neutral-1"
         />
 
-        <ul className="flex flex-row flex-wrap gap-y-6 gap-x-5 w-content">
+        <ul className="flex flex-row flex-wrap gap-y-6 gap-x-5 w-content max-md:w-full max-md:gap-3">
           {PRICE.HOME.map((item, index) => (
             <Item key={index} {...item} />
           ))}
@@ -53,9 +53,9 @@ const Item = memo(function Item({
   unit: string;
 }) {
   return (
-    <li className="w-[calc(20%-16px)] p-6 flex-col flex gap-6 rounded-[8px] bg-white">
+    <li className="w-[calc(20%-16px)] max-md:w-[calc(50%-6px)] max-md:p-4 max-md:gap-3 p-6 flex-col flex gap-6 rounded-[8px] bg-white">
       {Icon}
-      <div className="flex flex-col items-start gap-2">
+      <div className="flex flex-col items-start gap-2 max-md:gap-0">
         <div className="flex flex-row gap-1 items-end justify-end">
           <UITextHeading.H5 text={price} className="text-secondary-1" />
           <UITextBody.Regular18 text={unit} className="text-neutral-1" />

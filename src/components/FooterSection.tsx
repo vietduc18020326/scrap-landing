@@ -7,13 +7,12 @@ import {
 } from "@/assets";
 import { UIButton } from "@/components/UIButton";
 import Link from "next/link";
-import Image from "next/image";
 
 export const FooterSection = memo(function FooterSection() {
   return (
-    <footer className="bg-[#F4F4F5] py-12 w-full flex items-center justify-center">
-      <div className="w-content gap-12 flex flex-col">
-        <div className="w-content flex flex-row gap-[118px]">
+    <footer className="bg-[#F4F4F5] py-12 w-full flex items-center justify-center max-md:py-6 max-md:px-4">
+      <div className="w-content gap-12 flex flex-col max-md:w-full max-md:gap-10">
+        <div className="w-content flex flex-row gap-[118px] max-md:w-full max-md:gap-10 max-md:flex-col">
           <div className="flex flex-col w-[275px] gap-3 items-start">
             <img
               alt="image_logo"
@@ -50,29 +49,29 @@ export const FooterSection = memo(function FooterSection() {
             />
           </div>
 
-          <div className="flex flex-row flex-1 gap-5">
-            <div className="flex flex-col gap-4 items-start flex-1">
+          <div className="flex flex-row flex-1 gap-5 max-md:flex-wrap max-md:w-full max-md:flex-auto">
+            <div className="flex flex-col gap-4 items-start flex-1 max-md:w-[calc(50%-10px)] max-md:flex-auto">
               <UITextBody.Bold18 text="Company" className="text-neutral-1" />
               <div className="flex flex-col">
-                <Link href={"#"} className="py-3">
+                <Link href={"/"} className="py-3">
                   <UITextBody.SemiBold16
                     text="Home"
                     className="text-neutral-1"
                   />
                 </Link>
-                <Link href={"#"} className="py-3">
+                <Link href={"/rates"} className="py-3">
                   <UITextBody.SemiBold16
                     text="Scrap Rates"
                     className="text-neutral-1"
                   />
                 </Link>
-                <Link href={"#"} className="py-3">
+                <Link href={"/blogs"} className="py-3">
                   <UITextBody.SemiBold16
                     text="Blogs"
                     className="text-neutral-1"
                   />
                 </Link>
-                <Link href={"#"} className="py-3">
+                <Link href={"/career"} className="py-3">
                   <UITextBody.SemiBold16
                     text="Career"
                     className="text-neutral-1"
@@ -81,7 +80,7 @@ export const FooterSection = memo(function FooterSection() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 items-start flex-1">
+            <div className="flex flex-col gap-4 items-start flex-1 max-md:w-[calc(50%-10px)] max-md:flex-auto">
               <UITextBody.Bold18 text="Follow us" className="text-neutral-1" />
               <div className="flex flex-col">
                 <Link href={"#"} className="py-3">
@@ -108,7 +107,7 @@ export const FooterSection = memo(function FooterSection() {
             <div className="flex flex-col flex-1 gap-4">
               <UITextBody.Bold18
                 text={`Download mobile app\nfor drivers`}
-                className="text-neutral-1 whitespace-break-spaces"
+                className="text-neutral-1 whitespace-break-spaces max-md:whitespace-normal"
               />
               <div className="flex flex-col gap-3 items-start">
                 <button
@@ -128,7 +127,7 @@ export const FooterSection = memo(function FooterSection() {
           </div>
         </div>
 
-        <div className="w-full pt-6 border-t border-t-neutral-4 flex flex-row items-center justify-between">
+        <div className="w-full pt-6 border-t border-t-neutral-4 flex flex-row items-center justify-between max-md:flex-col max-md:gap-5">
           <div className="flex flex-row gap-12">
             <UITextBody.Regular16
               text="Privacy Policy"

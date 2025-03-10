@@ -3,7 +3,6 @@ import React, { memo, useCallback, useRef, useState } from "react";
 import Slider from "react-slick";
 import { UITextBody } from "@/components";
 import { DUMMY_SOLUTION } from "@/dummy";
-import Image from "next/image";
 
 const list = [...DUMMY_SOLUTION.PLAN, ...DUMMY_SOLUTION.PLAN];
 
@@ -20,13 +19,13 @@ export const ScrapPlanSection = memo(function ScrapPlanSection() {
   }, [currentIndex]);
 
   return (
-    <section className="w-full flex py-20 bg-secondary-3 items-center justify-center">
-      <div className="w-content flex flex-col gap-12 items-start relative">
-        <p className="text-[56px] font-lato leading-[68px] font-extrabold text-neutral-1">
+    <section className="w-full flex py-20 bg-secondary-3 items-center justify-center max-md:py-10 max-md:px-4">
+      <div className="w-content flex flex-col gap-12 items-start relative max-md:w-full max-md:gap-10 max-md:items-center">
+        <p className="text-[56px] font-lato leading-[68px] font-extrabold text-neutral-1 max-md:leading-8 max-md:text-[28px] max-md:text-center max-md:w-full">
           Scrap plan for the society
         </p>
 
-        <div className="flex relative items-center justify-center w-full">
+        <div className="flex relative items-center justify-center w-[calc(100%-40px)]">
           {currentIndex ? (
             <button
               onClick={onPrev}
@@ -61,8 +60,16 @@ export const ScrapPlanSection = memo(function ScrapPlanSection() {
             arrows={false}
             // centerMode
             adaptiveHeight
-            className="h-fit w-full gap-5"
+            className="h-fit w-full gap-5 max-md:gap-0"
             focusOnSelect
+            responsive={[
+              {
+                breakpoint: 1064,
+                settings: {
+                  slidesToShow: 1,
+                },
+              },
+            ]}
           >
             {list.map((item, index) => (
               <CardItem key={index} {...item} />
@@ -105,7 +112,7 @@ const CardItem = memo(function CardItem({
   link: string;
 }) {
   return (
-    <div className="rounded-[8px] bg-white flex-col mr-5 w-[373px] overflow-hidden">
+    <div className="rounded-[8px] bg-white flex-col mr-5 w-[373px] max-md:w-full overflow-hidden">
       <img alt={"img"} src={image} className="h-[210px] object-cover w-full" />
       <div className="p-6 gap-4 flex flex-col items-start">
         <div className="gap-2 flex flex-col items-start">

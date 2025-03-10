@@ -5,8 +5,8 @@ import { DUMMY_SOLUTION } from "@/dummy";
 
 export const SolutionsSection = memo(function SolutionsSection() {
   return (
-    <section className="bg-white flex items-center justify-center w-full py-20">
-      <div className="flex flex-col w-content gap-12 items-center">
+    <section className="bg-white flex items-center justify-center w-full py-20 max-md:py-10 max-md:px-4">
+      <div className="flex flex-col w-content gap-12 items-center max-md:gap-10">
         <div className="flex flex-col gap-3 items-center">
           <AbsTag title={"Our solutions"} absolute={false} />
           <UITextHeading.H2
@@ -15,8 +15,8 @@ export const SolutionsSection = memo(function SolutionsSection() {
           />
         </div>
 
-        <div className="flex flex-row gap-5 w-full">
-          <div className="flex flex-row gap-5 flex-wrap flex-1">
+        <div className="flex flex-row gap-5 w-full max-md:gap-3 max-md:flex-col">
+          <div className="flex flex-row gap-5 flex-wrap w-full max-md:gap-3 max-md:flex-col">
             {DUMMY_SOLUTION.HOME.slice(0, 2).map((item, index) => (
               <Item key={index} {...item} />
             ))}
@@ -24,7 +24,7 @@ export const SolutionsSection = memo(function SolutionsSection() {
             <img
               alt="image_solution_1"
               src={IMAGE_SOLUTION_1}
-              className="w-[373px]"
+              className="max-md:w-full max-md:h-[168px] object-cover rounded-[8px]"
             />
 
             {DUMMY_SOLUTION.HOME.slice(2, 5).map((item, index) => (
@@ -35,7 +35,7 @@ export const SolutionsSection = memo(function SolutionsSection() {
           <img
             alt={"image_solution_2"}
             src={IMAGE_SOLUTION_2}
-            className="w-[373px] rounded-[8px]"
+            className="w-[373px] rounded-[8px] max-md:w-full max-md:h-[336px] object-cover"
           />
         </div>
       </div>
@@ -56,7 +56,7 @@ const Item = memo(function Item({
   description: string;
 }) {
   return (
-    <li className="flex flex-col border h-fit border-neutral-4 rounded-[8px] p-6 w-[374px] gap-4 items-start">
+    <li className="flex flex-col border h-fit border-neutral-4 rounded-[8px] p-6 w-[374px] gap-4 items-start max-md:w-full max-md:p-4 max-md:gap-3">
       <div className={`p-2 rounded-[8px]`} style={{ background: icon.bgColor }}>
         {icon.Comp}
       </div>

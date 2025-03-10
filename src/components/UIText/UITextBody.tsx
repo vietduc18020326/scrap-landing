@@ -5,6 +5,22 @@ interface Props
   text?: string; // Example of an additional custom prop
 }
 
+const SemiBold14 = memo(function SemiBold14({
+  text,
+  children,
+  className,
+  ...props
+}: Props) {
+  return (
+    <p
+      className={`text-[14px] font-semibold not-italic leading-5 tracking-[-0.5px] font-lato ${className}`}
+      {...props}
+    >
+      {text || children}
+    </p>
+  );
+});
+
 const SemiBold16 = memo(function SemiBold16({
   text,
   children,
@@ -69,6 +85,22 @@ const Bold20 = memo(function Bold20({
   );
 });
 
+const Medium18 = memo(function Medium18({
+  text,
+  children,
+  className,
+  ...props
+}: Props) {
+  return (
+    <p
+      className={`text-[18px] font-medium not-italic leading-7 tracking-[-0.5px] font-lato ${className}`}
+      {...props}
+    >
+      {text || children}
+    </p>
+  );
+});
+
 const Medium20 = memo(function Medium20({
   text,
   children,
@@ -117,12 +149,14 @@ const Regular16 = memo(function Regular16({
 });
 
 export const UITextBody = {
+  SemiBold14,
   SemiBold16,
 
   Bold20,
   Bold18,
   Bold16,
 
+  Medium18,
   Medium20,
 
   Regular18,

@@ -4,13 +4,13 @@ import { DUMMY_TEAM } from "@/dummy/team";
 
 export const TeamSection = memo(function TeamSection() {
   return (
-    <section className="bg-white py-20 items-center justify-center flex">
-      <div className="w-content gap-12 flex flex-col items-center justify-center">
+    <section className="bg-white py-20 items-center justify-center flex max-md:px-4 w-full">
+      <div className="w-content gap-12 flex flex-col items-center justify-center max-md:w-full">
         <div className="flex flex-col gap-3 items-center relative">
           <div className="relative">
             <AbsTag
               title={"Our team"}
-              className="rotate-[-8.234deg] -left-16 -top-7"
+              className="rotate-[-8.234deg] -left-16 -top-7 max-md:left-0 max-md:-top-9"
             />
             <UITextHeading.H2
               text="Director’s Profiles"
@@ -19,11 +19,11 @@ export const TeamSection = memo(function TeamSection() {
           </div>
           <UITextBody.Medium20
             text="Scraplan's team comprises experienced professionals from diverse backgrounds, including waste management, technology, and business. Our founders, bring a wealth of experience in waste management and technology and have a shared vision for creating a sustainable and efficient waste management ecosystem in India. Our team is also supported by advisors and mentors who provide valuable guidance and industry insights."
-            className="text-neutral-1 w-[766px] text-center"
+            className="text-neutral-1 w-[766px] text-center max-md:w-full"
           />
         </div>
 
-        <ul className="flex flex-row gap-5 w-full">
+        <ul className="flex flex-row gap-5 w-full max-md:flex-col">
           {DUMMY_TEAM.HOME.map((item, index) => (
             <MemberItem key={index} isFirst={!index} {...item} />
           ))}
@@ -48,7 +48,7 @@ const MemberItem = memo(function MemberItem({
 }) {
   return (
     <li
-      className={`${isFirst ? "" : "pl-5 border-l border-l-neutral-4"} flex-1`}
+      className={`${isFirst ? "" : "pl-5 border-l border-l-neutral-4"} flex-1 max-md:border-l-0 max-md:pl-0`}
     >
       <div className="p-6 items-center justify-center flex flex-col gap-4">
         <div className="p-4 rounded-[100px] bg-secondary-3">
