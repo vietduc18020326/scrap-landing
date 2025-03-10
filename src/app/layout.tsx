@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { CustomLayout } from "@/components";
 import { FONTS } from "@/app/fonts";
 import React from "react";
+import Head from "next/head";
+import { ConfigProvider } from "antd";
 
 export const metadata: Metadata = {
   title: "Scrap Website",
@@ -18,16 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={FONTS.LATO.className}>
-      {/*<Head>*/}
-      {/*  <link*/}
-      {/*    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"*/}
-      {/*    rel="stylesheet"*/}
-      {/*  />*/}
-      {/*</Head>*/}
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <body>
-        <div id="root">
-          <CustomLayout>{children}</CustomLayout>
-        </div>
+        <ConfigProvider>
+          <div id="root">
+            <CustomLayout>{children}</CustomLayout>
+          </div>
+        </ConfigProvider>
       </body>
     </html>
   );
