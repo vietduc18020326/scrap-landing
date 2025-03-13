@@ -129,14 +129,18 @@ export const FooterSection = memo(function FooterSection() {
 
         <div className="w-full pt-6 border-t border-t-neutral-4 flex flex-row items-center justify-between max-md:flex-col max-md:gap-5">
           <div className="flex flex-row gap-12">
-            <UITextBody.Regular16
-              text="Privacy Policy"
-              className="text-neutral-2"
-            />
-            <UITextBody.Regular16
-              text="Term & Conditions"
-              className="text-neutral-2"
-            />
+            <Link href={"/privacy"}>
+              <UITextBody.Regular16
+                text="Privacy Policy"
+                className="text-neutral-2"
+              />
+            </Link>
+            <Link href={"/term-conditions"}>
+              <UITextBody.Regular16
+                text="Term & Conditions"
+                className="text-neutral-2"
+              />
+            </Link>
           </div>
 
           <UITextBody.Regular16

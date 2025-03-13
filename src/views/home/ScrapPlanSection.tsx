@@ -56,7 +56,7 @@ export const ScrapPlanSection = memo(function ScrapPlanSection() {
             initialSlide={currentIndex}
             draggable={false}
             afterChange={setCurrentIndex}
-            // variableWidth
+            variableWidth
             arrows={false}
             // centerMode
             adaptiveHeight
@@ -67,6 +67,7 @@ export const ScrapPlanSection = memo(function ScrapPlanSection() {
                 breakpoint: 1064,
                 settings: {
                   slidesToShow: 1,
+                  variableWidth: false,
                 },
               },
             ]}

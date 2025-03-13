@@ -6,12 +6,14 @@ interface Props extends HTMLAttributes<HTMLButtonElement> {
   textClassName?: string;
   title: string;
   RightIconComponent?: JSX.Element;
+  LeftIconComponent?: JSX.Element;
 }
 
 export const UIButton = memo(function UIButton({
   className = "",
   textClassName,
   title,
+  LeftIconComponent,
   RightIconComponent,
   ...props
 }: Props) {
@@ -23,6 +25,7 @@ export const UIButton = memo(function UIButton({
       )}
       {...props}
     >
+      {LeftIconComponent ? LeftIconComponent : null}
       <UITextBody.Bold16 text={title} className={textClassName} />
       {RightIconComponent ? RightIconComponent : null}
     </button>
