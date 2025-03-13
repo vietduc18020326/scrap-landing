@@ -27,15 +27,17 @@ const HomePage = memo(function HomePage() {
           <div className="flex flex-col w-full gap-3 items-start">
             {isMobile ? (
               <div className="flex flex-col items-start">
-                <div className="relative">
+                <div className="flex flex-row w-fit">
                   <UITextHeading.H3
-                    text="Maximize your scrop profits with"
+                    text="Maximize your scrop profits width"
                     className="text-neutral-1"
                   />
-                  <AbsTag
-                    title="Smart"
-                    className="left-[130px] rotate-[-7.169deg] -top-8 max-md:left-auto right-0"
-                  />
+                  <div className="relative">
+                    <AbsTag
+                      title="Smart"
+                      className="left-[0px] rotate-[-7.169deg] -top-8 max-md:-left-[100px] w-fit"
+                    />
+                  </div>
                 </div>
                 <UITextHeading.H3
                   text="waste management."
