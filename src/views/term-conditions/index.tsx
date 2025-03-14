@@ -1,7 +1,11 @@
 import { memo } from "react";
 import Link from "next/link";
-import { UIButton, UITextBody, UITextHeading } from "@/components";
-import { TableContents } from "./TableContents";
+import {
+  UIButton,
+  UITextBody,
+  UITextHeading,
+  TableContents,
+} from "@/components";
 
 const TermConditionsPage = memo(function TermConditionsPage() {
   return (
@@ -52,7 +56,12 @@ const TermConditionsPage = memo(function TermConditionsPage() {
         <section className="w-full flex flex-row items-start justify-between max-md:flex-col-reverse">
           <div className="w-[668px]"></div>
 
-          <TableContents />
+          <TableContents
+            options={[
+              "Let's start at the beginning",
+              "Limitation of Liability",
+            ]}
+          />
         </section>
       </div>
     </div>

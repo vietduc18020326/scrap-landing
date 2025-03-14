@@ -2,16 +2,13 @@ import { memo } from "react";
 import { UITextBody, UITextHeading } from "@/components";
 import { Avatar } from "antd";
 import { IMAGE_AVATAR_1 } from "@/assets";
+import Link from "next/link";
 
 export const FeaturedBlogSection = memo(function FeaturedBlogSection() {
   return (
-    <section
+    <Link
+      href={`/blogs/1`}
       className="w-content gap-5 items-center flex flex-row cursor-pointer max-md:flex-col-reverse max-md:w-full"
-      onClick={() =>
-        window.open(
-          "https://eoxs.com/new_blog/how-to-optimize-metal-scrap-handling-and-processing/",
-        )
-      }
     >
       <img
         alt={"img_blog"}
@@ -44,6 +41,6 @@ export const FeaturedBlogSection = memo(function FeaturedBlogSection() {
           <UITextBody.Bold18 text="Geoff Roberts" className="text-neutral-2" />
         </div>
       </div>
-    </section>
+    </Link>
   );
 });

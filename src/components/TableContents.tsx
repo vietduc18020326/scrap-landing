@@ -1,13 +1,13 @@
 "use client";
 
 import { memo, useCallback, useMemo, useState } from "react";
-import { UITextBody, UITextHeading } from "@/components";
+import { UITextBody, UITextHeading } from "@/components/UIText";
 
-interface Props {}
+interface Props {
+  options: Array<string>;
+}
 
-const DATA = ["Let's start at the beginning", "Limitation of Liability"];
-
-export const TableContents = memo(function TableContents({}: Props) {
+export const TableContents = memo(function TableContents({ options }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -15,7 +15,7 @@ export const TableContents = memo(function TableContents({}: Props) {
       <UITextHeading.H5 text="Table of contents" className="text-neutral-1" />
 
       <ul className="flex flex-col gap-2 max-md:w-full">
-        {DATA.map((item, index) => (
+        {options.map((item, index) => (
           <Item
             key={index}
             title={item}

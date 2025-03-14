@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { UITextBody } from "@/components";
+import Link from "next/link";
 
 interface Props {
   title: string;
@@ -15,9 +16,9 @@ export const BlogItem = memo(function BlogItem({
   link,
 }: Props) {
   return (
-    <div
+    <Link
+      href={"/blogs/1"}
       className="flex flex-col cursor-pointer w-[calc(33%-15px)] max-md:w-full"
-      onClick={() => window.open(link)}
     >
       <img
         alt="img_blog"
@@ -50,6 +51,6 @@ export const BlogItem = memo(function BlogItem({
           </svg>
         </div>
       </div>
-    </div>
+    </Link>
   );
 });

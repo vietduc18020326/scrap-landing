@@ -1,7 +1,11 @@
 import { memo } from "react";
 import Link from "next/link";
-import { UIButton, UITextBody, UITextHeading } from "@/components";
-import { TableContents } from "@/views/privacy/TableContents";
+import {
+  UIButton,
+  UITextBody,
+  UITextHeading,
+  TableContents,
+} from "@/components";
 
 const PrivacyPage = memo(function PrivacyPage() {
   return (
@@ -64,7 +68,19 @@ const PrivacyPage = memo(function PrivacyPage() {
         <section className="w-full flex flex-row items-start justify-between max-md:flex-col-reverse">
           <div className="w-[668px]"></div>
 
-          <TableContents />
+          <TableContents
+            options={[
+              "Applicability of these Privacy Rules",
+              "Collection and receipt of information",
+              "Processing of your information and legal framework for this processing",
+              "Sharing and Disclosure of Information",
+              "Data retention",
+              "Security",
+              "Age limits",
+              "Changes to this Privacy Policy",
+              "International Data Transfers",
+            ]}
+          />
         </section>
       </div>
     </div>
